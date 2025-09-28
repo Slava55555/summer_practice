@@ -1,4 +1,0 @@
-[warn] scala-swing-2.10.7-sources.jar no longer exists at /home/slava/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-swing/2.10.7/scala-swing-2.10.7-sources.jar
-[debug] not up to date. inChanged = false, force = false
-[debug] Updating ProjectRef(uri("file:/home/slava/Документы/Java/summer_practice/"), "root")...
-[debug] Done updating ProjectRef(uri("file:/home/slava/Документы/Java/summer_practice/"), "root")
