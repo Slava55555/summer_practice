@@ -1,6 +1,7 @@
 import javax.swing._
 import java.awt._
-class number extends JDialog{
+
+class number extends JDialog {
   setTitle("Задание по практике")
   setSize(300, 200)
   val panel = new JPanel()
@@ -11,7 +12,7 @@ class number extends JDialog{
   val butt5 = new JButton("задание5")
   val butt6 = new JButton("задание6")
   val butt7 = new JButton("задание7")
-  panel.setLayout(new GridLayout(7,1,0,0))
+  panel.setLayout(new GridLayout(7, 1, 0, 0))
   butt1.addActionListener((_) => {
     val zadan1 = new JDialog()
     zadan1.setTitle("Задание №1")
@@ -38,14 +39,14 @@ class number extends JDialog{
       ans.setText(String.format("%.7f", test.result(A1, R1, deg1).asInstanceOf[Double]))
     })
   })
-  butt2.addActionListener((_)=>{
+  butt2.addActionListener((_) => {
     val zadan2 = new JDialog()
     zadan2.setTitle("Задание №2")
     zadan2.setSize(300, 200)
     val number2 = new JPanel()
     number2.setLayout(new GridLayout(2, 2, 10, 10))
     val Q0 = new JSpinner(new SpinnerNumberModel(0.0, 0.0, 100.0, 0.1))
-    val massiv = Array("без покрытия","кадмиевое")
+    val massiv = Array("без покрытия", "кадмиевое")
     val coating = new JComboBox[String](massiv)
     number2.add(Q0)
     number2.add(coating)
@@ -59,12 +60,12 @@ class number extends JDialog{
       val test = new ex2
       val Q01 = Q0.getModel.getValue.asInstanceOf[Double]
       val coating1 = coating.getModel.getSelectedItem.asInstanceOf[String]
-      val t = test.result(Q01,coating1)
+      val t = test.result(Q01, coating1)
       ans.setText(f"Расчет момента трения для первой затяжки:${t(0)} \n " +
         f"Расчет момента трения для десятой затяжки${t(1)}")
     })
   })
-  butt3.addActionListener((_)=>{
+  butt3.addActionListener((_) => {
     val zadan3 = new JDialog()
     zadan3.setTitle("Задание №3")
     zadan3.setSize(300, 200)
@@ -84,7 +85,7 @@ class number extends JDialog{
       ans.setText(String.format("%.7f", test.result(axialClearance1)))
     })
   })
-  butt4.addActionListener((_)=>{
+  butt4.addActionListener((_) => {
     val zadan4 = new JDialog()
     zadan4.setTitle("Задание №4")
     zadan4.setSize(300, 200)
@@ -104,10 +105,10 @@ class number extends JDialog{
       val test = new ex4
       val Z1 = Z.getModel.getValue.asInstanceOf[Double]
       val C1 = C.getModel.getValue.asInstanceOf[Double]
-      ans.setText(String.format("%.7f", test.result(Z1,C1)))
+      ans.setText(String.format("%.7f", test.result(Z1, C1)))
     })
   })
-  butt5.addActionListener((_)=>{
+  butt5.addActionListener((_) => {
     val zadan5 = new JDialog()
     zadan5.setTitle("Задание №5")
     zadan5.setSize(300, 200)

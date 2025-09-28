@@ -2,8 +2,8 @@ import scala.util.Random
 
 class ex5 {
   def generateDimensions(n: Int, baseDiameter: Double, tolerance: Double): List[Double] = {
-  (1 to n).map(_ => baseDiameter + Random.nextDouble() * tolerance).toList
-}
+    (1 to n).map(_ => baseDiameter + Random.nextDouble() * tolerance).toList
+  }
 
   def classifyConnections(shafts: List[Double], holes: List[Double]): (List[Double], List[Double], List[Double]) = {
     val connections = shafts.zip(holes)
@@ -22,6 +22,7 @@ class ex5 {
           noGap.map { case (shaft, hole) => hole - shaft })
     }
   }
+
   def result(n: Int): Array[Double] = {
     val toleranceShaft = 0.05
     val toleranceHole = 0.08
